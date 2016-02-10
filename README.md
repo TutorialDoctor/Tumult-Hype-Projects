@@ -9,3 +9,6 @@ Experimenting with Tumult Hype for web development.
 
 ## Tadpoles (paper.js)
 ![](https://github.com/TutorialDoctor/Tumult-Hype-Projects/raw/master/Projects/paperJS/tadpoles/screen.png)
+
+## Birds (three.js)
+![](https://github.com/TutorialDoctor/Tumult-Hype-Projects/raw/master/Projects/threeJS/Birds/screen.png)
