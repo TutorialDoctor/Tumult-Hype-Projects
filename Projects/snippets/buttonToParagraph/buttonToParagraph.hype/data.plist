@@ -46,8 +46,8 @@
 	<key>displayedAttributes</key>
 	<array>
 		<string>kPropertiesMenuItemIdentifierOpacity</string>
-		<string>kPropertiesMenuItemIdentifierAnimated</string>
 		<string>kPropertiesMenuItemIdentifierPosition</string>
+		<string>kPropertiesMenuItemIdentifierAnimated</string>
 	</array>
 	<key>documentVersion</key>
 	<string>518</string>
@@ -68,17 +68,17 @@
 	<key>hasManuallyChangedCSSPositioning</key>
 	<false/>
 	<key>lastCheckDate</key>
-	<date>2016-02-12T20:35:52Z</date>
+	<date>2016-02-13T16:24:34Z</date>
 	<key>layout</key>
 	<dict>
 		<key>currentInspectorPane</key>
-		<integer>7</integer>
+		<integer>2</integer>
 		<key>customizableLayout</key>
 		<dict>
 			<key>frame</key>
 			<string>{{0, 0}, {1680, 925}}</string>
 			<key>identifier</key>
-			<string>container 9</string>
+			<string>container 5</string>
 			<key>isCustomizableViewContainer</key>
 			<true/>
 			<key>isCustomizableViewWrapper</key>
@@ -91,7 +91,7 @@
 					<key>frame</key>
 					<string>{{0, 0}, {1409, 925}}</string>
 					<key>identifier</key>
-					<string>container 7</string>
+					<string>container 196</string>
 					<key>isCustomizableViewContainer</key>
 					<true/>
 					<key>isCustomizableViewWrapper</key>
@@ -104,7 +104,7 @@
 							<key>frame</key>
 							<string>{{0, 0}, {135, 925}}</string>
 							<key>identifier</key>
-							<string>container 2</string>
+							<string>container 186</string>
 							<key>isCustomizableViewContainer</key>
 							<true/>
 							<key>isCustomizableViewWrapper</key>
@@ -127,7 +127,7 @@
 							<key>frame</key>
 							<string>{{136, 0}, {1273, 925}}</string>
 							<key>identifier</key>
-							<string>container 5</string>
+							<string>container 187</string>
 							<key>isCustomizableViewContainer</key>
 							<true/>
 							<key>isCustomizableViewWrapper</key>
@@ -190,7 +190,7 @@
 					<key>frame</key>
 					<string>{{1410, 0}, {270, 925}}</string>
 					<key>identifier</key>
-					<string>container 6</string>
+					<string>container 195</string>
 					<key>isCustomizableViewContainer</key>
 					<true/>
 					<key>isCustomizableViewWrapper</key>
@@ -225,7 +225,7 @@
 			</dict>
 		</array>
 		<key>selectedTabIndex</key>
-		<integer>1</integer>
+		<integer>0</integer>
 		<key>showInspectorView</key>
 		<true/>
 		<key>showResourcesView</key>
@@ -265,7 +265,7 @@
 	<key>monotypeProjectID</key>
 	<string>4C7F9F38-A5E1-48D2-B0D0-FBEB74CC99CF-50549-000125194556051B</string>
 	<key>oidCounter</key>
-	<integer>19</integer>
+	<integer>34</integer>
 	<key>resourcesInfo</key>
 	<dict>
 		<key>groups</key>
@@ -292,7 +292,7 @@
 						<key>timeCursors</key>
 						<dict>
 							<key>kTimelineDefaultIdentifier</key>
-							<real>0.60000002384185791</real>
+							<real>0.0</real>
 						</dict>
 						<key>timescale</key>
 						<integer>60</integer>
@@ -344,21 +344,24 @@ function buttonToParagraph(hypeDocument, element, event) {
 	
 	var name = element.textContent;
 	var text = hypeDocument.getElementById('text');
+	var rect = hypeDocument.getElementById('rect');
+	var colors = ["#FF8469","#56DC72","#788AFD"];
 	
 	var p1 = "Maiores quos officiis fugit aut. Quia et quia qui consequuntur quo placeat. Maxime hic id sit aut ducimus. Molestias non exercitationem modi explicabo sint. Voluptates eum eius nihil nisi modi. Voluptate et voluptas quia nemo.";
 	var p2 = "Fuga exercitationem veritatis fugiat a unde ex aut quibusdam. In deleniti adipisci accusamus molestias corrupti. Nemo ut dolorum non totam quia animi. Maxime illum et ea in accusamus sit. Inventore rerum in cupiditate. Cupiditate dolores et et ut ut. Quia sed vel voluptates modi ea ut.";
 	var p3 = "Alias nobis cupiditate iusto assumenda ea omnis minus. Et accusantium sequi magnam est tenetur. Sit iste doloribus cupiditate saepe quidem. Sit autem magnam necessitatibus aspernatur deserunt. Soluta quia dolor et vitae ex et.";
 	
-	if (true){
-		if(name=="Info"){text.textContent = p1;}
-		else if(name=="Contact"){text.textContent=p2;}
-		else if(name=="Portfolio"){text.textContent=p3;}
-
+	function connect(a,b,c){
+		if(true){
+		if(name==a){text.textContent=b;
 		hypeDocument.startTimelineNamed('Main Timeline');
-		
-
-
+		rect.style.backgroundColor = c;
+		}}
 	}
+	
+	connect("Portfolio",p1,colors[0]);
+	connect("Info",p2,colors[1]);
+	connect("Contact",p3,colors[2]);
 }
 </string>
 		</dict>
@@ -379,7 +382,7 @@ function buttonToParagraph(hypeDocument, element, event) {
 	<array>
 		<dict>
 			<key>documentIdentifier</key>
-			<string>7B08E379-3CD7-42C5-A628-0941DA177AA2-50549-000125022937267E</string>
+			<string>9864F2AC-2829-4825-A544-58B93FEB8022-50549-00013AFF7ABCC500</string>
 			<key>selectedObjects</key>
 			<array/>
 			<key>symbol</key>
@@ -414,12 +417,6 @@ function buttonToParagraph(hypeDocument, element, event) {
 						</dict>
 						<dict>
 							<key>identifier</key>
-							<string>BorderWidthBottom</string>
-							<key>objectValue</key>
-							<string>0px</string>
-						</dict>
-						<dict>
-							<key>identifier</key>
 							<string>ShowButtonEditor</string>
 							<key>objectValue</key>
 							<string>1</string>
@@ -435,6 +432,12 @@ function buttonToParagraph(hypeDocument, element, event) {
 							<string>Parent</string>
 							<key>objectValue</key>
 							<string>15</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>BorderWidthBottom</string>
+							<key>objectValue</key>
+							<string>0px</string>
 						</dict>
 						<dict>
 							<key>identifier</key>
@@ -522,9 +525,19 @@ function buttonToParagraph(hypeDocument, element, event) {
 						</dict>
 						<dict>
 							<key>identifier</key>
-							<string>ZIndex</string>
+							<string>ActionHandlerOnMouseOver</string>
 							<key>objectValue</key>
-							<string>1</string>
+							<dict>
+								<key>actions</key>
+								<array>
+									<dict>
+										<key>javascriptOid</key>
+										<string>19</string>
+										<key>type</key>
+										<integer>4</integer>
+									</dict>
+								</array>
+							</dict>
 						</dict>
 						<dict>
 							<key>identifier</key>
@@ -540,19 +553,9 @@ function buttonToParagraph(hypeDocument, element, event) {
 						</dict>
 						<dict>
 							<key>identifier</key>
-							<string>ActionHandlerOnMouseOver</string>
+							<string>ZIndex</string>
 							<key>objectValue</key>
-							<dict>
-								<key>actions</key>
-								<array>
-									<dict>
-										<key>javascriptOid</key>
-										<string>19</string>
-										<key>type</key>
-										<integer>4</integer>
-									</dict>
-								</array>
-							</dict>
+							<string>1</string>
 						</dict>
 						<dict>
 							<key>identifier</key>
@@ -586,6 +589,12 @@ function buttonToParagraph(hypeDocument, element, event) {
 						</dict>
 						<dict>
 							<key>identifier</key>
+							<string>PaddingRight</string>
+							<key>objectValue</key>
+							<string>6px</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
 							<string>BorderColorLeft</string>
 							<key>objectValue</key>
 							<string>#A0A0A0</string>
@@ -595,12 +604,6 @@ function buttonToParagraph(hypeDocument, element, event) {
 							<string>Width</string>
 							<key>objectValue</key>
 							<string>90px</string>
-						</dict>
-						<dict>
-							<key>identifier</key>
-							<string>PaddingRight</string>
-							<key>objectValue</key>
-							<string>6px</string>
 						</dict>
 						<dict>
 							<key>identifier</key>
@@ -643,6 +646,12 @@ function buttonToParagraph(hypeDocument, element, event) {
 							<string>BorderWidthLeft</string>
 							<key>objectValue</key>
 							<string>0px</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>ClassName</string>
+							<key>objectValue</key>
+							<string>buttons1</string>
 						</dict>
 						<dict>
 							<key>identifier</key>
@@ -691,15 +700,15 @@ function buttonToParagraph(hypeDocument, element, event) {
 						</dict>
 						<dict>
 							<key>identifier</key>
-							<string>BorderWidthBottom</string>
-							<key>objectValue</key>
-							<string>0px</string>
-						</dict>
-						<dict>
-							<key>identifier</key>
 							<string>Parent</string>
 							<key>objectValue</key>
 							<string>15</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>BorderWidthBottom</string>
+							<key>objectValue</key>
+							<string>0px</string>
 						</dict>
 						<dict>
 							<key>identifier</key>
@@ -787,9 +796,19 @@ function buttonToParagraph(hypeDocument, element, event) {
 						</dict>
 						<dict>
 							<key>identifier</key>
-							<string>ZIndex</string>
+							<string>ActionHandlerOnMouseOver</string>
 							<key>objectValue</key>
-							<string>2</string>
+							<dict>
+								<key>actions</key>
+								<array>
+									<dict>
+										<key>javascriptOid</key>
+										<string>19</string>
+										<key>type</key>
+										<integer>4</integer>
+									</dict>
+								</array>
+							</dict>
 						</dict>
 						<dict>
 							<key>identifier</key>
@@ -805,19 +824,9 @@ function buttonToParagraph(hypeDocument, element, event) {
 						</dict>
 						<dict>
 							<key>identifier</key>
-							<string>ActionHandlerOnMouseOver</string>
+							<string>ZIndex</string>
 							<key>objectValue</key>
-							<dict>
-								<key>actions</key>
-								<array>
-									<dict>
-										<key>javascriptOid</key>
-										<string>19</string>
-										<key>type</key>
-										<integer>4</integer>
-									</dict>
-								</array>
-							</dict>
+							<string>2</string>
 						</dict>
 						<dict>
 							<key>identifier</key>
@@ -911,6 +920,12 @@ function buttonToParagraph(hypeDocument, element, event) {
 						</dict>
 						<dict>
 							<key>identifier</key>
+							<string>ClassName</string>
+							<key>objectValue</key>
+							<string>buttons1</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
 							<string>Overflow</string>
 							<key>objectValue</key>
 							<string>visible</string>
@@ -956,15 +971,15 @@ function buttonToParagraph(hypeDocument, element, event) {
 						</dict>
 						<dict>
 							<key>identifier</key>
-							<string>BorderWidthBottom</string>
-							<key>objectValue</key>
-							<string>0px</string>
-						</dict>
-						<dict>
-							<key>identifier</key>
 							<string>Parent</string>
 							<key>objectValue</key>
 							<string>15</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>BorderWidthBottom</string>
+							<key>objectValue</key>
+							<string>0px</string>
 						</dict>
 						<dict>
 							<key>identifier</key>
@@ -1052,9 +1067,19 @@ function buttonToParagraph(hypeDocument, element, event) {
 						</dict>
 						<dict>
 							<key>identifier</key>
-							<string>ZIndex</string>
+							<string>ActionHandlerOnMouseOver</string>
 							<key>objectValue</key>
-							<string>3</string>
+							<dict>
+								<key>actions</key>
+								<array>
+									<dict>
+										<key>javascriptOid</key>
+										<string>19</string>
+										<key>type</key>
+										<integer>4</integer>
+									</dict>
+								</array>
+							</dict>
 						</dict>
 						<dict>
 							<key>identifier</key>
@@ -1070,19 +1095,9 @@ function buttonToParagraph(hypeDocument, element, event) {
 						</dict>
 						<dict>
 							<key>identifier</key>
-							<string>ActionHandlerOnMouseOver</string>
+							<string>ZIndex</string>
 							<key>objectValue</key>
-							<dict>
-								<key>actions</key>
-								<array>
-									<dict>
-										<key>javascriptOid</key>
-										<string>19</string>
-										<key>type</key>
-										<integer>4</integer>
-									</dict>
-								</array>
-							</dict>
+							<string>3</string>
 						</dict>
 						<dict>
 							<key>identifier</key>
@@ -1176,6 +1191,12 @@ function buttonToParagraph(hypeDocument, element, event) {
 						</dict>
 						<dict>
 							<key>identifier</key>
+							<string>ClassName</string>
+							<key>objectValue</key>
+							<string>buttons1</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
 							<string>Overflow</string>
 							<key>objectValue</key>
 							<string>visible</string>
@@ -1235,7 +1256,7 @@ function buttonToParagraph(hypeDocument, element, event) {
 							<key>identifier</key>
 							<string>ZIndex</string>
 							<key>objectValue</key>
-							<string>3</string>
+							<string>7</string>
 						</dict>
 						<dict>
 							<key>identifier</key>
@@ -1262,6 +1283,171 @@ function buttonToParagraph(hypeDocument, element, event) {
 							<string>Group</string>
 						</dict>
 					</array>
+					<key>33</key>
+					<array>
+						<dict>
+							<key>identifier</key>
+							<string>TagName</string>
+							<key>objectValue</key>
+							<string>div</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>BorderWidthBottom</string>
+							<key>objectValue</key>
+							<string>0px</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>BorderColorBottom</string>
+							<key>objectValue</key>
+							<string>#D8DDE4</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>ExplicitDimensions</string>
+							<key>objectValue</key>
+							<string>YES</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>DomID</string>
+							<key>objectValue</key>
+							<string>rect</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>BorderStyleRight</string>
+							<key>objectValue</key>
+							<string>None</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>ClassType</string>
+							<key>objectValue</key>
+							<string>Rectangle</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>BorderStyleBottom</string>
+							<key>objectValue</key>
+							<string>None</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>Top</string>
+							<key>objectValue</key>
+							<string>133px</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>BorderWidthRight</string>
+							<key>objectValue</key>
+							<string>0px</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>BorderStyleLeft</string>
+							<key>objectValue</key>
+							<string>None</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>BorderColorLeft</string>
+							<key>objectValue</key>
+							<string>#D8DDE4</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>BorderColorTop</string>
+							<key>objectValue</key>
+							<string>#D8DDE4</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>Position</string>
+							<key>objectValue</key>
+							<string>absolute</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>Height</string>
+							<key>objectValue</key>
+							<string>126px</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>AutoresizingMask</string>
+							<key>objectValue</key>
+							<string>47</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>Left</string>
+							<key>objectValue</key>
+							<string>0px</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>BorderColorRight</string>
+							<key>objectValue</key>
+							<string>#D8DDE4</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>InnerHTML</string>
+							<key>objectValue</key>
+							<string></string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>BorderStyleTop</string>
+							<key>objectValue</key>
+							<string>None</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>Width</string>
+							<key>objectValue</key>
+							<string>600px</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>ZIndex</string>
+							<key>objectValue</key>
+							<string>1</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>BorderWidthTop</string>
+							<key>objectValue</key>
+							<string>0px</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>Overflow</string>
+							<key>objectValue</key>
+							<string>visible</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>DisplayName</string>
+							<key>objectValue</key>
+							<string>rect</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>BorderWidthLeft</string>
+							<key>objectValue</key>
+							<string>0px</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>BackgroundColor</string>
+							<key>objectValue</key>
+							<string>#3E3F40</string>
+						</dict>
+					</array>
 					<key>9</key>
 					<array>
 						<dict>
@@ -1272,9 +1458,9 @@ function buttonToParagraph(hypeDocument, element, event) {
 						</dict>
 						<dict>
 							<key>identifier</key>
-							<string>TagName</string>
+							<string>TextColor</string>
 							<key>objectValue</key>
-							<string>div</string>
+							<string>#FFFFFF</string>
 						</dict>
 						<dict>
 							<key>identifier</key>
@@ -1376,7 +1562,7 @@ function buttonToParagraph(hypeDocument, element, event) {
 							<key>identifier</key>
 							<string>ZIndex</string>
 							<key>objectValue</key>
-							<string>2</string>
+							<string>6</string>
 						</dict>
 						<dict>
 							<key>identifier</key>
@@ -1410,9 +1596,9 @@ function buttonToParagraph(hypeDocument, element, event) {
 						</dict>
 						<dict>
 							<key>identifier</key>
-							<string>TextColor</string>
+							<string>TagName</string>
 							<key>objectValue</key>
-							<string>#3A3A3A</string>
+							<string>div</string>
 						</dict>
 					</array>
 				</dict>
@@ -1422,6 +1608,61 @@ function buttonToParagraph(hypeDocument, element, event) {
 				<string>Scene Symbol</string>
 				<key>oid</key>
 				<string>2</string>
+				<key>onSceneDragActionHandler</key>
+				<dict>
+					<key>actions</key>
+					<array/>
+				</dict>
+				<key>onSceneKeyDownActionHandler</key>
+				<dict>
+					<key>actions</key>
+					<array/>
+				</dict>
+				<key>onSceneKeyPressActionHandler</key>
+				<dict>
+					<key>actions</key>
+					<array/>
+				</dict>
+				<key>onSceneKeyUpActionHandler</key>
+				<dict>
+					<key>actions</key>
+					<array/>
+				</dict>
+				<key>onSceneLoadActionHandler</key>
+				<dict>
+					<key>actions</key>
+					<array/>
+				</dict>
+				<key>onSceneSwipeDownActionHandler</key>
+				<dict>
+					<key>actions</key>
+					<array/>
+				</dict>
+				<key>onSceneSwipeLeftActionHandler</key>
+				<dict>
+					<key>actions</key>
+					<array/>
+				</dict>
+				<key>onSceneSwipeRightActionHandler</key>
+				<dict>
+					<key>actions</key>
+					<array/>
+				</dict>
+				<key>onSceneSwipeUpActionHandler</key>
+				<dict>
+					<key>actions</key>
+					<array/>
+				</dict>
+				<key>onSceneTimelineCompleteActionHandler</key>
+				<dict>
+					<key>actions</key>
+					<array/>
+				</dict>
+				<key>onSceneUnloadActionHandler</key>
+				<dict>
+					<key>actions</key>
+					<array/>
+				</dict>
 				<key>onTopDuringSceneTransition</key>
 				<true/>
 				<key>properties</key>
