@@ -12,3 +12,6 @@ Experimenting with Tumult Hype for web development.
 
 ## Birds (three.js)
 ![](https://github.com/TutorialDoctor/Tumult-Hype-Projects/raw/master/Projects/threeJS/Birds/screen.png)
+
+## Sketchfab Example
+![](https://github.com/TutorialDoctor/Tumult-Hype-Projects/blob/master/Projects/sketchfab/sketchfab%20example/screen.png)
