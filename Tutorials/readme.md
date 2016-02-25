@@ -1,4 +1,4 @@
-A collection of hype tutorials as hype documents but the Tutorial Doctor.
+A collection of hype tutorials as hype documents by the Tutorial Doctor.
 
 More to come!
 
