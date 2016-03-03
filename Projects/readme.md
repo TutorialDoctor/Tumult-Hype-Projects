@@ -1,3 +1,1 @@
-Tumult Hype test demos and projects.
-
-Lots of javascript libraries to test!
+Small to medium projects using Tumult Hype.
