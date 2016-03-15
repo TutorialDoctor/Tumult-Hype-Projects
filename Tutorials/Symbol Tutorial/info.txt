@@ -1,0 +1,5 @@
+Changing the color of one button does not affect the color of a duplicated button.
+
+Changing the color of one button in one of two groups (where one group is a duplicate of the other) does not affect the corresponding button in the duplicated group.
+
+Changing the color of one button in one of two symbols(where one symbol is a duplicate of the other) affects the corresponding button in the dup
